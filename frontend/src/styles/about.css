@@ -1,8 +1,10 @@
+/* src/styles/About.css */
+
 /* ========= Page Qui sommes-nous ========= */
 
 .about-page {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2.5rem;    /* avant 3rem */
+  padding-bottom: 2.5rem; /* avant 3rem */
 }
 
 .about-title {
@@ -10,23 +12,30 @@
   font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #0593ff; /* bleu dans l'esprit du modèle, adapte si tu veux */
-  margin-bottom: 2.5rem;
+  color:  #c6362c;
+  margin-bottom: 2rem; /* un peu moins qu'avant */
 }
 
 .about-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  gap: 2.5rem;
-  align-items: flex-start;
-  margin-bottom: 2.5rem;
+  gap: 2rem;
+  align-items: center;        /* centre l'image et le texte verticalement */
+  margin-bottom: 1.8rem;      /* moins d'espace blanc sous le bloc */
+}
+
+/* Bloc image avec hauteur contrôlée */
+.about-hero-image {
+  max-height: 360px;          /* <-- hauteur max de l'image */
+  border-radius: 8px;
+  overflow: hidden;           /* coupe le surplus */
 }
 
 .about-hero-image img {
   width: 100%;
+  height: 100%;
   display: block;
-  border-radius: 8px;
-  object-fit: cover;
+  object-fit: cover;          /* recadre proprement dans la hauteur */
 }
 
 .about-hero-text p {
@@ -45,7 +54,7 @@
 }
 
 .about-body p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.1rem;
 }
 
 /* Responsive */
@@ -56,6 +65,11 @@
 
   .about-title {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-hero-image {
+    max-height: 260px; /* un peu moins haut sur mobile */
   }
 }
+
