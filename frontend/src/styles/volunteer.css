@@ -1,0 +1,115 @@
+/* ========= Section Devenir bénévole ========= */
+
+.volunteer-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  max-width: 720px;      /* largeur max du bloc */
+  margin-left: auto;     /* centre horizontalement */
+  margin-right: auto;    /* centre horizontalement */
+}
+
+.volunteer-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #c6362c;
+  text-align: center;    /* titre centré */
+}
+
+.volunteer-intro {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;    /* texte d'intro centré */
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;        /* centre le formulaire dans la section */
+}
+
+.form-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c6362c;
+  box-shadow: 0 0 0 1px rgba(198, 54, 44, 0.15);
+}
+
+.form-consent {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.form-consent label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.form-consent input[type="checkbox"] {
+  margin-top: 0.15rem;
+}
+
+.volunteer-submit {
+  align-self: center;    /* bouton centré */
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #c6362c;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+
+.volunteer-submit:hover {
+  background-color: #aa2f27;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.volunteer-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Responsive formulaire bénévole */
+@media (max-width: 900px) {
+  .volunteer-section {
+    padding: 1.5rem 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .form-two-columns {
+    grid-template-columns: 1fr;
+  }
+}

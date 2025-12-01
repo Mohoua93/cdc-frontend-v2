@@ -1,5 +1,5 @@
 // src/pages/About.jsx
-import teamPhoto from "../assets/images/pics-QSM.jpg";
+import teamPhoto from "../assets/images/pics-QSM-1.jpeg";
 import "../styles/about.css";
 
 

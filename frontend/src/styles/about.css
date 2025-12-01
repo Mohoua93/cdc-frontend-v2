@@ -1,10 +1,10 @@
-/* src/styles/About.css */
+/* src/styles/about.css */
 
 /* ========= Page Qui sommes-nous ========= */
 
 .about-page {
-  padding-top: 2.5rem;    /* avant 3rem */
-  padding-bottom: 2.5rem; /* avant 3rem */
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .about-title {
@@ -12,30 +12,37 @@
   font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color:  #c6362c;
-  margin-bottom: 2rem; /* un peu moins qu'avant */
+  color: #c6362c;
+  margin-bottom: 2rem;
 }
 
+/* Bloc image + texte */
 .about-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  gap: 2rem;
-  align-items: center;        /* centre l'image et le texte verticalement */
-  margin-bottom: 1.8rem;      /* moins d'espace blanc sous le bloc */
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); /* image un peu plus étroite */
+  column-gap: 1.5rem;    /* petit espace entre image et texte */
+  align-items: center;
+  margin-bottom: 1.8rem;
 }
 
-/* Bloc image avec hauteur contrôlée */
+.about-hero-image,
+.about-hero-text {
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur image un peu limité en largeur */
 .about-hero-image {
-  max-height: 360px;          /* <-- hauteur max de l'image */
   border-radius: 8px;
-  overflow: hidden;           /* coupe le surplus */
+  max-width: 480px;      /* limite la largeur de la photo sur grands écrans */
 }
 
+/* Image : taille naturelle, sans tassement ni rognage */
 .about-hero-image img {
-  width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;          /* recadre proprement dans la hauteur */
+  width: 100%;
+  height: auto;          /* conserve les proportions */
+  border-radius: 8px;
 }
 
 .about-hero-text p {
@@ -61,6 +68,8 @@
 @media (max-width: 900px) {
   .about-hero {
     grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 1.2rem;
   }
 
   .about-title {
@@ -69,7 +78,8 @@
   }
 
   .about-hero-image {
-    max-height: 260px; /* un peu moins haut sur mobile */
+    max-width: 100%;     /* sur mobile, l'image prend toute la largeur */
   }
 }
+
 
